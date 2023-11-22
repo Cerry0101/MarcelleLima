@@ -1,0 +1,39 @@
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+
+
+/* Adicione este trecho ao seu arquivo de estilo */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* Para evitar que o brilho vaze para fora do body */
+  background: linear-gradient(to bottom right, #1fcd56 50%, rgb(1, 29, 3) 50%);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 50% 0%, rgba(236, 255, 234, 0.4) 0%, transparent 80%); /* Gradiente brilhante diagonal */
+  pointer-events: none; /* Não interfere com a interação do usuário */
+  z-index: 1; /* Coloca o brilho sobre o conteúdo */
+}
+
